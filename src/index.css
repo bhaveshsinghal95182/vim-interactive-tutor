@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Gruvbox Dark Theme */
+    --background: 0 6% 12%;
+    --background-hard: 0 6% 11%;
+    --background-soft: 24 7% 16%;
+    --foreground: 43 59% 81%;
+
+    --card: 24 7% 16%;
+    --card-foreground: 43 59% 81%;
+
+    --popover: 24 7% 16%;
+    --popover-foreground: 43 59% 81%;
+
+    /* Gruvbox Yellow as primary */
+    --primary: 42 75% 50%;
+    --primary-foreground: 0 6% 12%;
+
+    /* Gruvbox Gray for secondary */
+    --secondary: 24 7% 20%;
+    --secondary-foreground: 43 59% 81%;
+
+    --muted: 24 7% 20%;
+    --muted-foreground: 30 12% 50%;
+
+    /* Gruvbox Aqua for accent */
+    --accent: 150 20% 51%;
+    --accent-foreground: 0 6% 12%;
+
+    /* Gruvbox Red */
+    --destructive: 0 67% 46%;
+    --destructive-foreground: 43 59% 81%;
+
+    --border: 24 7% 22%;
+    --input: 24 7% 22%;
+    --ring: 42 75% 50%;
+
+    --radius: 0.375rem;
+
+    /* Gruvbox Accent Colors */
+    --gruvbox-red: 0 67% 46%;
+    --gruvbox-green: 66 75% 35%;
+    --gruvbox-yellow: 42 75% 50%;
+    --gruvbox-blue: 194 30% 43%;
+    --gruvbox-purple: 323 30% 48%;
+    --gruvbox-aqua: 150 20% 51%;
+    --gruvbox-orange: 24 85% 45%;
+    --gruvbox-gray: 30 12% 50%;
+
+    /* Editor specific */
+    --editor-bg: 0 6% 12%;
+    --editor-line-highlight: 24 7% 16%;
+    --editor-cursor: 42 75% 50%;
+    --editor-selection: 24 7% 22%;
+
+    /* Mode colors */
+    --mode-normal: 42 75% 50%;
+    --mode-insert: 66 75% 35%;
+    --mode-visual: 323 30% 48%;
+    --mode-command: 194 30% 43%;
+
+    /* Sidebar */
+    --sidebar-background: 24 7% 14%;
+    --sidebar-foreground: 43 59% 81%;
+    --sidebar-primary: 42 75% 50%;
+    --sidebar-primary-foreground: 0 6% 12%;
+    --sidebar-accent: 24 7% 20%;
+    --sidebar-accent-foreground: 43 59% 81%;
+    --sidebar-border: 24 7% 22%;
+    --sidebar-ring: 42 75% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: "Inter", sans-serif;
+  }
+
+  .font-mono {
+    font-family: "JetBrains Mono", monospace;
+  }
+}
+
+@layer components {
+  .editor-text {
+    @apply font-mono text-base leading-relaxed tracking-wide;
+    font-family: "JetBrains Mono", monospace;
+  }
+
+  .vim-cursor {
+    @apply bg-primary animate-cursor-blink;
+  }
+
+  .vim-cursor-insert {
+    @apply w-0.5 bg-gruvbox-green animate-cursor-blink;
+  }
+
+  .lesson-item {
+    @apply px-4 py-2 rounded-md transition-all duration-200;
+  }
+
+  .lesson-item-active {
+    @apply bg-secondary border-l-2 border-primary;
+  }
+
+  .lesson-item-completed {
+    @apply text-gruvbox-green;
+  }
+
+  .statusline {
+    @apply font-mono text-sm px-4 py-1.5 bg-secondary flex items-center justify-between;
+  }
+
+  .mode-indicator {
+    @apply font-bold px-2 py-0.5 rounded text-xs uppercase tracking-wider;
+  }
+
+  .instruction-highlight {
+    @apply bg-primary/20 border border-primary/40 rounded-md p-4;
+  }
+
+  .key-cap {
+    @apply inline-flex items-center justify-center min-w-[1.75rem] h-7 px-2 
+           bg-secondary border border-border rounded font-mono text-sm font-medium
+           shadow-[0_2px_0_0_hsl(var(--border))] transition-all duration-100;
+  }
+
+  .key-cap:active {
+    @apply shadow-none translate-y-0.5;
+  }
+}
+
+@layer utilities {
+  .text-gruvbox-red {
+    color: hsl(var(--gruvbox-red));
+  }
+  .text-gruvbox-green {
+    color: hsl(var(--gruvbox-green));
+  }
+  .text-gruvbox-yellow {
+    color: hsl(var(--gruvbox-yellow));
+  }
+  .text-gruvbox-blue {
+    color: hsl(var(--gruvbox-blue));
+  }
+  .text-gruvbox-purple {
+    color: hsl(var(--gruvbox-purple));
+  }
+  .text-gruvbox-aqua {
+    color: hsl(var(--gruvbox-aqua));
+  }
+  .text-gruvbox-orange {
+    color: hsl(var(--gruvbox-orange));
+  }
+  .text-gruvbox-gray {
+    color: hsl(var(--gruvbox-gray));
+  }
+
+  .bg-gruvbox-red {
+    background-color: hsl(var(--gruvbox-red));
+  }
+  .bg-gruvbox-green {
+    background-color: hsl(var(--gruvbox-green));
+  }
+  .bg-gruvbox-yellow {
+    background-color: hsl(var(--gruvbox-yellow));
+  }
+  .bg-gruvbox-blue {
+    background-color: hsl(var(--gruvbox-blue));
+  }
+  .bg-gruvbox-purple {
+    background-color: hsl(var(--gruvbox-purple));
+  }
+  .bg-gruvbox-aqua {
+    background-color: hsl(var(--gruvbox-aqua));
+  }
+  .bg-gruvbox-orange {
+    background-color: hsl(var(--gruvbox-orange));
+  }
+
+  .border-gruvbox-yellow {
+    border-color: hsl(var(--gruvbox-yellow));
+  }
+}
+
+@keyframes cursor-blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-cursor-blink {
+  animation: cursor-blink 1s step-end infinite;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes success-flash {
+  0%,
+  100% {
+    background-color: hsl(var(--secondary));
+  }
+  50% {
+    background-color: hsl(var(--gruvbox-green) / 0.3);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.3s ease-out;
+}
+
+.animate-success-flash {
+  animation: success-flash 0.6s ease-out;
+}
+
+/* Custom scrollbar for Gruvbox theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground));
+}
