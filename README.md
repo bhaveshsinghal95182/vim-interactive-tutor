@@ -38,9 +38,7 @@ Try it out at: [https://vim-interactive-tutor.vercel.app](https://vim-interactiv
 
 ### Preview
 
-```html
-<video controls width="720" src="https://vim-interactive-tutor.vercel.app/vim-interactive-tutor-1766591938715.mp4"></video>
-```
+https://vim-interactive-tutor.vercel.app/vim-interactive-tutor-1766591938715.mp4
 
 ## Installation
 
