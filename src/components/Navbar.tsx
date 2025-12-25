@@ -47,7 +47,7 @@ export function Navbar({ onMenuClick, sidebarOpen }: NavbarProps) {
         {/* Right side - Links */}
         <nav className="flex items-center gap-2">
           <a
-            href="https://github.com"
+            href="https://github.com/bhaveshsinghal95182/vim-interactive-tutor"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex"

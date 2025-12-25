@@ -1,7 +1,6 @@
 import { lessons, getAllLevels, getLessonsByLevel } from '@/data/lessons';
-import { ChevronLeft, ChevronRight, Check, Circle, Lock } from 'lucide-react';
+import { Check, Circle, Lock } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/button';
 
 interface LessonSidebarProps {
   isOpen: boolean;
