@@ -38,33 +38,15 @@ export function LessonSidebar({
 
   return (
     <>
-      {/* Toggle Button */}
-      <Button
-        variant="ghost"
-        size="icon"
-        onClick={onToggle}
-        className={cn(
-          "fixed top-4 z-50 transition-all duration-300",
-          isOpen ? "left-64" : "left-4"
-        )}
-      >
-        {isOpen ? <ChevronLeft className="h-5 w-5" /> : <ChevronRight className="h-5 w-5" />}
-      </Button>
-
       {/* Sidebar */}
       <aside
         className={cn(
-          "fixed left-0 top-0 h-full bg-sidebar border-r border-sidebar-border z-40",
+          "fixed left-0 top-14 h-[calc(100vh-3.5rem)] bg-sidebar border-r border-sidebar-border z-30",
           "transition-all duration-300 ease-in-out",
           isOpen ? "w-64 translate-x-0" : "w-64 -translate-x-full"
         )}
       >
         <div className="flex flex-col h-full">
-          {/* Header */}
-          <div className="p-6 border-b border-sidebar-border">
-            <h1 className="text-xl font-bold text-primary">VimInteractive</h1>
-            <p className="text-sm text-muted-foreground mt-1">Learn Vim, interactively</p>
-          </div>
 
           {/* Lessons List */}
           <nav className="flex-1 overflow-y-auto py-4">

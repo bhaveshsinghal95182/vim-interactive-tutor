@@ -4,6 +4,7 @@ import { LessonSidebar } from '@/components/LessonSidebar';
 import { InstructionsPanel } from '@/components/InstructionsPanel';
 import { LessonComplete } from '@/components/LessonComplete';
 import { KeyboardHint } from '@/components/KeyboardHint';
+import { Navbar } from '@/components/Navbar';
 import { useProgress } from '@/hooks/useProgress';
 import { getLessonById, getNextLesson } from '@/data/lessons';
 import { toast } from 'sonner';
@@ -115,6 +116,12 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Navbar */}
+      <Navbar
+        onMenuClick={toggleSidebar}
+        sidebarOpen={appState.sidebarOpen}
+      />
+
       {/* Sidebar */}
       <LessonSidebar
         isOpen={appState.sidebarOpen}
@@ -127,7 +134,7 @@ const Index = () => {
       {/* Main Content */}
       <main
         className={cn(
-          "min-h-screen transition-all duration-300 ease-in-out",
+          "min-h-screen pt-14 transition-all duration-300 ease-in-out",
           appState.sidebarOpen ? "pl-64" : "pl-0"
         )}
       >
