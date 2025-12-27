@@ -17,10 +17,19 @@ const Index = () => {
     markLessonComplete,
     isLessonCompleted,
     toggleSidebar,
+    resetKey,
   } = useProgress();
 
   const [showComplete, setShowComplete] = useState(false);
   const [editorKey, setEditorKey] = useState(0);
+
+  // Reset editor when progress is reset
+  useEffect(() => {
+    if (resetKey > 0) {
+      setEditorKey(k => k + 1);
+      setShowComplete(false);
+    }
+  }, [resetKey]);
 
   const currentLesson = getLessonById(appState.currentLessonId);
   const nextLesson = currentLesson ? getNextLesson(currentLesson.id) : undefined;

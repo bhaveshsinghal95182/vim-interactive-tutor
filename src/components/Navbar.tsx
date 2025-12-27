@@ -1,6 +1,6 @@
 import { Menu, Github, Terminal, X, Settings, Settings2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useProgress } from '@/hooks/useProgress';
+import { useProgress } from "@/hooks/useProgress";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -65,14 +65,11 @@ export function Navbar({ onMenuClick, sidebarOpen }: NavbarProps) {
                 <span className="sr-only">Settings</span>
               </Button>
             </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-56" align="end">
+            <DropdownMenuContent className="w-56" align="end">
               <DropdownMenuItem
                 className="flex items-center text-destructive/80 cursor-pointer"
                 onClick={() => {
-                  if (
-                    typeof window !== 'undefined' &&
-                    window.confirm('Reset all progress? This cannot be undone.')
-                  ) {
+                  if (typeof window !== "undefined") {
                     resetProgress();
                   }
                 }}
