@@ -63,6 +63,13 @@ export function useProgress() {
   }, []);
 
   const resetProgress = useCallback(() => {
+    try {
+      if (typeof window !== 'undefined') {
+        localStorage.removeItem(STORAGE_KEY);
+      }
+    } catch (e) {
+      console.error('Failed to clear progress storage:', e);
+    }
     setAppState(defaultState);
   }, []);
 
