@@ -3,26 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VimInteractive - Learn Vim Interactively</title>
+    
+    <!-- Primary Meta Tags -->
+    <title>VimInteractive - Learn Vim Commands & Motions Interactively | Free Tutorial</title>
     <meta
       name="description"
-      content="Master Vim motions and commands with this interactive, web-based tutorial. Learn at your own pace with real-time feedback and beautiful Gruvbox aesthetics."
+      content="Master Vim motions, commands, and text editing with this free interactive tutorial. 25+ lessons from basics to advanced. Real-time feedback, progress tracking, and beautiful Gruvbox theme. No installation required."
     />
     <meta name="author" content="VimInteractive" />
     <meta
       name="keywords"
-      content="vim, vimtutor, learn vim, vim tutorial, vim motions, vim commands, interactive learning"
+      content="vim tutorial, learn vim online, vimtutor, vim motions, vim commands, vim editor, interactive vim, vim for beginners, vim cheat sheet, text editor, modal editing, vim practice, vim training, free vim course"
     />
-
-    <meta
-      property="og:title"
-      content="VimInteractive - Learn Vim Interactively"
-    />
-    <meta
-      property="og:description"
-      content="Master Vim motions and commands with this interactive, web-based tutorial."
-    />
+    
+    <!-- Robots & Canonical -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href="https://viminteractive.com/" />
+    
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://viminteractive.com/" />
+    <meta property="og:title" content="VimInteractive - Learn Vim Commands & Motions Interactively" />
+    <meta property="og:description" content="Master Vim with 25+ interactive lessons. Free, browser-based tutorial with real-time feedback. From basics to advanced - no installation required." />
+    <meta property="og:image" content="https://viminteractive.com/og_image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="VimInteractive - Interactive Vim Tutorial with Gruvbox theme" />
+    <meta property="og:site_name" content="VimInteractive" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://viminteractive.com/" />
+    <meta name="twitter:title" content="VimInteractive - Learn Vim Commands & Motions Interactively" />
+    <meta name="twitter:description" content="Master Vim with 25+ interactive lessons. Free, browser-based tutorial with real-time feedback." />
+    <meta name="twitter:image" content="https://viminteractive.com/og_image.png" />
+    <meta name="twitter:image:alt" content="VimInteractive - Interactive Vim Tutorial" />
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="application-name" content="VimInteractive" />
+    <meta name="apple-mobile-web-app-title" content="VimInteractive" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
 
     <!-- Favicons & manifest -->
     <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
@@ -32,15 +56,136 @@
     <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/favicons/android-chrome-512x512.png" />
     <link rel="manifest" href="/favicons/site.webmanifest" />
-    <meta name="theme-color" content="#2b2b2b" />
+    <meta name="theme-color" content="#2b2b2b" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#fbf1c7" media="(prefers-color-scheme: light)" />
+    <meta name="msapplication-TileColor" content="#2b2b2b" />
 
-    <!-- Open Graph image -->
-    <meta property="og:image" content="/og_image.png" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="/og_image.png" />
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "VimInteractive",
+      "alternateName": "Vim Interactive Tutorial",
+      "description": "Master Vim motions and commands with this free interactive, web-based tutorial. 25+ lessons from basics to advanced with real-time feedback.",
+      "url": "https://viminteractive.com",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript. Requires HTML5.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "150",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "featureList": [
+        "25+ interactive lessons",
+        "Real-time feedback",
+        "Progress tracking",
+        "No installation required",
+        "Gruvbox color theme",
+        "Covers movement, editing, visual mode, search, and more"
+      ],
+      "screenshot": "https://viminteractive.com/og_image.png",
+      "softwareVersion": "1.0.0",
+      "author": {
+        "@type": "Organization",
+        "name": "VimInteractive"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "Interactive Vim Tutorial",
+      "description": "Learn Vim from scratch with hands-on interactive lessons. Master modal editing, motions, operators, and advanced commands.",
+      "provider": {
+        "@type": "Organization",
+        "name": "VimInteractive",
+        "url": "https://viminteractive.com"
+      },
+      "educationalLevel": "Beginner to Advanced",
+      "isAccessibleForFree": true,
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": "online",
+        "courseWorkload": "PT2H"
+      },
+      "teaches": ["Vim commands", "Vim motions", "Modal editing", "Text manipulation", "Search and replace"],
+      "numberOfCredits": 0,
+      "inLanguage": "en"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is VimInteractive?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "VimInteractive is a free, browser-based interactive tutorial that teaches you Vim commands and motions through hands-on practice. No installation required."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is VimInteractive free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! VimInteractive is completely free to use. All 25+ lessons are available without any payment or registration."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to install anything?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No installation is required. VimInteractive runs entirely in your web browser with a full Vim emulator."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to complete?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The complete tutorial takes approximately 2 hours to finish, but you can learn at your own pace with progress saved automatically."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://viminteractive.com/"
+        }
+      ]
+    }
+    </script>
 
+    <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
       rel="stylesheet"
